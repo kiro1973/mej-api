@@ -12,7 +12,7 @@ const YAML = require("yamljs");
 const swaggerJSDocs = YAML.load("./api.yaml");
 
 app.use(express.json());
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerJSDocs));
+app.use("/", swaggerUI.serve, swaggerUI.setup(swaggerJSDocs));
 
 
 
